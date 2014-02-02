@@ -34,5 +34,10 @@ public class PlaySpace {
 		}
 		return temp;
 	}
+   
+   // Simple toString method
+   public String toString() {
+      return played.toString();
+   }
 
 }

@@ -21,6 +21,7 @@ public class test {
 		System.out.println(players);
 		Pile discardPile = new Pile(true, 0, 0, players);
 		PlaySpace playSpace = new PlaySpace(players);
+      System.out.println(playSpace);
 		deck.deal(7, hands);
 	}
 
