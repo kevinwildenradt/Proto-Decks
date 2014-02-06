@@ -128,4 +128,9 @@ public class Pile {
 			}
 		}
 		
+		// Returns true if pile is empty
+		public boolean isEmpty() {
+			return pile.isEmpty();
+		}
+		
 }

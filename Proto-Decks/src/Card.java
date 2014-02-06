@@ -3,7 +3,7 @@
 import java.awt.*;
 import java.net.URL;
 
-import android.media.Image;
+// import android.media.Image;
 public class Card implements Comparable<Card> {
 	private int value;   	   // Value from 0 - 14 of the card, ace is either 0 or 14
 	private String suit; 	   // Suit of the card in normal suits
