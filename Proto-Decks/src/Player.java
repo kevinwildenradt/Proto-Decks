@@ -1,3 +1,5 @@
+import java.util.Set;
+
 // A class to describe each player who is within a game
 public class Player {
 	
@@ -6,9 +8,10 @@ public class Player {
 	private boolean isDealer;	// whether player is the current dealer, not sure if needed
 	
 	// constructor
-	public Player(String name) {
+	public Player(String name, Set<String> allowedViewers) {
 		this.name = name;
 		isDealer = false;
+		hand = new Pile(false, 0, 0, allowedViewers);
 	}
 	
 	// Returns name
