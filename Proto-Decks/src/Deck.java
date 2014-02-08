@@ -8,7 +8,7 @@ public class Deck extends Pile {
 	// values assignment may later be changed, or replaced with final variables
 	public Deck(boolean topVisible, int x, int y, Set<String> allowedViewers) {
 		super(topVisible, x, y, allowedViewers);
-		for (int i = 1; i >= 52; i++) {
+		for (int i = 1; i <= 52; i++) {
 			super.add(new Card(i, true, x, y));
 		}
 	}

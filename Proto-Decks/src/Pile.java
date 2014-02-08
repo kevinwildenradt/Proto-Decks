@@ -29,12 +29,16 @@ public class Pile {
 		
 		// returns the top card and deletes it from the pile
 		public Card remove() {
-			return pile.remove(0);
+			return remove(0);
 		}
 		
 		// returns the card at index n in the pile and deletes it from pile
 		public Card remove(int n) {
-			return pile.remove(n);
+			if(pile.size() > n) {
+				return pile.remove(n);
+			} else {
+				return null;
+			}
 		}
 		
 		// returns this pile and removes the contents of it. 
