@@ -21,10 +21,8 @@ public class Pile {
 	} 
 	
 		// shuffles pile n times
-		public void shuffle(int n) {
-			for(int i = 0; i < n; i++) {
+		public void shuffle() {
 				Collections.shuffle(pile);
-			}
 		}
 		
 		// returns the top card and deletes it from the pile

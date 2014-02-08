@@ -38,29 +38,37 @@ public class Card implements Comparable<Card> {
 		}
 		
 		// assigns suit
-		switch(value / 13) {  // smallest values clubs, then diamonds, etc
-			case 0: suit = "clubs";
-			case 1: suit = "diamonds";
-			case 2: suit = "hearts";
-			case 3: suit = "spades";
-			case 4: suit = "spades";
+		switch((value-1) / 13) {  // smallest values clubs, then diamonds, etc
+			case 0: suit = "Clubs";
 			break;
-			default: suit = "joker"; break; // default suit is joker
+			case 1: suit = "Diamonds";
+			break;
+			case 2: suit = "Hearts";
+			break;
+			case 3: suit = "Spades";
+			break;
+			default: suit = "joker"; 
+			break; // default suit is joker
 		}
 		
 		// Assigns the name of the card
 		if(this.value >= 2 && this.value <= 10) { // simple case
-			name = "" + this.value + " " + suit;
+			name = "" + this.value + " of " + suit;
 		} else { 						// complex case
 			String temp;
 			switch(this.value) {             
 				case 1:  temp = "Ace";
+				break;
 				case 11: temp = "Jack";
+				break;
 				case 12: temp = "Queen";
+				break;
 				case 13: temp = "King";
+				break;
 				case 14: temp = "Ace";
 				break;
-				default: temp = "joker"; break;
+				default: temp = "joker"; 
+				break;
 			}
 			name = temp + " of " + suit;
 		}
