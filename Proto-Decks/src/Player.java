@@ -1,4 +1,5 @@
 import java.util.Set;
+import java.util.TreeSet;
 
 // A class to describe each player who is within a game
 public class Player {
@@ -8,10 +9,12 @@ public class Player {
 	private boolean isDealer;	// whether player is the current dealer, not sure if needed
 	
 	// constructor
-	public Player(String name, Set<String> allowedViewers) {
+	public Player(String name) {
 		this.name = name;
 		isDealer = false;
-		hand = new Pile(false, 0, 0, allowedViewers);
+		Set<String> temp = new TreeSet<String>(); // Set containing only player's name
+		temp.add(name);
+		hand = new Pile(false, 0, 0, temp);       // New hand viewable by player
 	}
 	
 	// Returns name
