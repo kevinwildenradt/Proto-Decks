@@ -74,6 +74,15 @@ public class Card implements Comparable<Card> {
 		}
 	}
 	
+	//general-case constructor for custom decks
+	public Card(String name, String suit, int value, int centerX, int centerY) {
+		this.name = name;
+		this.suit = suit;
+		this.value = value;
+		this.centerX = centerX;
+		this.centerY = centerY;
+	}
+
 	public String toString() {
 		return name;
 	}
