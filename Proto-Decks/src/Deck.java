@@ -5,6 +5,7 @@ import java.util.*;
 // Deck is a pile which can be filled with default values
 public class Deck extends Pile {
 
+	// default constructor
 	// fills deck with cards representing all 52 cards in a standard deck
 	// values assignment may later be changed, or replaced with final variables
 	public Deck(boolean topVisible, int x, int y, Set<String> allowedViewers) {
@@ -14,6 +15,8 @@ public class Deck extends Pile {
 		}
 	}
 	
+	// File based constructor
+	// takes a deck input file and builds a custom deck with custom cards
 	public Deck(boolean topVisible, int x, int y, Set<String> allowedViewers, String filename) throws FileNotFoundException {
 		super(topVisible, x, y, allowedViewers);
 		Scanner deckFile = new Scanner(new File(filename));

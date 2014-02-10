@@ -1,4 +1,5 @@
 
+import java.io.FileNotFoundException;
 import java.util.*;
 //ayoh
 public class test {
@@ -14,6 +15,7 @@ public class test {
 		players.add("Jim");
 		players.add("Bob");
 		Deck deck = new Deck(false, 0, 0, players);
+		//Deck deck = new Deck(false, 0, 0, players, "PokeymanDeck.txt");
 		System.out.println(deck);
 		deck.shuffle();
 		System.out.println(deck);
